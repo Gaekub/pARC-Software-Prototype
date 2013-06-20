@@ -11,3 +11,6 @@
       div.user {  width: 150px; margin-right: 0; margin-left: auto; text-align: center;}
       
       h1 {display : inline;}
+      
+      #table-wrapper table * {background:yellow; color:black;}
+      #table-wrapper table thead th .text {position:absolute; top:-20px; z-index:2; height:20px; width:35%; border:1px solid red; }
