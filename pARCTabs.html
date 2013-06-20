@@ -26,10 +26,17 @@
     </ul>
 
     <div class="tabContent" id="homepage">
-      <h2>Homepage</h2>
-      <div>
-        <p>Stuff</p>
-      </div>
+	<div>
+		<marquee behavior="scroll" direction="left">This is a Marquee</marquee>
+	</div>
+	<p><h2>REMINDERS</h2></p>
+	<script type="text/javascript">
+	
+	//populatedropdown(id_of_day_select, id_of_month_select, id_of_year_select)
+	window.onload=function(){
+	populatedropdown("daydropdown", "monthdropdown", "yeardropdown")
+	}
+	</script>
     </div>
 
     <div class="tabContent" id="search">
