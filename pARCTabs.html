@@ -30,23 +30,23 @@
 		<marquee behavior="scroll" direction="left">This is a Marquee</marquee>
 	</div>
 	<p><h2>REMINDERS</h2></p>
-	
+
 	<select>
 	  <option>Yesterday</option>
 	  <option selected>Today</option>
 	  <option>Tomorrow</option>
 	  <option>etc</option>
 	</select>
-	
+
 	<div id="table-wrapper">
 	  <div id="table-scroll">
-	    <table>
+	    <table width="100%">
 	        <thead>
 	            <tr>
-	                <th><span class="text">Name</span></th>
-	                <th><span class="text">Location</span></th>
-	                <th><span class="text">Time</span></th>
-	                <th><span class="text">Countdown</span></th>
+	                <th width="40%"><span class="text">Name</span></th>
+	                <th width="40%"><span class="text">Location</span></th>
+	                <th width="10%"><span class="text">Time</span></th>
+	                <th width="10%"><span class="text">Countdown</span></th>
 	            </tr>
 	        </thead>
 	        <tbody>
@@ -56,35 +56,181 @@
 	  </div>
 	</div>
 	<p><a href="#" class="parcbutton">Cancel Reminder</a></p>
+	<div id="table-wrapper">
+	  <div id="table-scroll">
+	    <table width="100%">
+	        <thead>
+	            <tr>
+	                <th width="40%"><span class="text">Name</span></th>
+	                <th width="40%"><span class="text">Location</span></th>
+	                <th width="10%"><span class="text">Date</span></th>
+	                <th width="10%"><span class="text">Time</span></th>
+	            </tr>
+	        </thead>
+	        <tbody>
+			<tr> <td><input type="text" width="100%"></td> <td><input type="text" width="100%"></td> <td><input type="text" width="100%"></td> <td><input type="text" width="100%"></td> </tr>
+	        </tbody>
+	    </table>
+	  </div>
+	</div>
 	<p><a href="#" class="parcbutton">Add Reminder</a></p>
     </div>
 
     <div class="tabContent" id="search">
       <h2>Search For Activities</h2>
       <div>
-        <p>Stuff</p>
-      </div>
-    </div>
+      	<p><a href="#" class="parcbutton">Quick Find</a>  Load User Preferences <input type="checkbox"><br></p>
+      	<p><a href="#" class="parcbutton" onClick="togglePageElementVisibility(advancedSearch)">Advanced Search</a></p>
+ 		<div id="advancedSearch" style="display:none">
+			Date: <select>
+	 		 <option>Yesterday</option>
+			  <option selected>Today</option>
+	 		 <option>Tomorrow</option>
+	 		 <option>etc</option>
+			</select>
+			<p>Select your free hours:</p>
+			<p><a href="#" class="parcbutton">Add FreetimeArea</a> [Freetime selector goes here]</p>
 
-    <div class="tabContent" id="schedule">
-      <h2>Current Schedule</h2>
-      <div>
-        <p>Stuff</p>
+			<p>Mode of Transportation: <select>
+				 <option>Public Transit</option>
+				 <option selected>Walking</option>
+				 <option>Car</option>
+			</select></p>
+
+			<p>Current Location: <input type="text"></p>
+
+			<div style="display:inline">Cost ($): <select>
+				 <option>Free</option>
+				 <option selected>0-20</option>
+				 <option>20-50</option>
+				 <option>50-100</option>
+				 <option>>100</option>
+			</select><div align="right">Inside: <input type="checkbox">/Outside: <input type="checkbox"></div></div>
+
+			<div style="display:inline"><p>Likes: <input type="text"></p> <p>Dislikes: <input type="text"></p></div>
+ 		</div>
+ 		Results
+			<div id="table-wrapper">
+			  <div id="table-scroll">
+				<table width="100%">
+					<thead>
+						<tr>
+							<th width="50%"><span class="text">Name</span></th>
+							<th width="40%"><span class="text">Location</span></th>
+							<th width="10%"><span class="text">Approx. Cost</span></th>
+						</tr>
+					</thead>
+					<tbody>
+					<tr> <td>Bob's Bowling</td> <td>Bob's Bowling Alley</td> <td>30$</td></tr>
+					</tbody>
+				</table>
+			  </div>
+			</div>
       </div>
     </div>
 
     <div class="tabContent" id="profile">
-      <h2>Profile</h2>
-      <div>
-        <p>Stuff</p>
-      </div>
+		<h2>Edit Profile</h2>
+		<p>Username: [username]</p>
+		<p>Password: ********** <a href="url">edit</a></p>
+		<p>email: [email] <a href="url">edit</a></p>
+
+		<h2>User Search Preferences</h2>
+ 		<div id="advancedSearch">
+			<p>Mode of Transportation: <select>
+				 <option>Public Transit</option>
+				 <option selected>Walking</option>
+				 <option>Car</option>
+			</select></p>
+
+			<p>Home Location: <input type="text"></p>
+
+			<div style="display:inline">Budget ($): <select>
+				 <option>Free</option>
+				 <option selected>0-20</option>
+				 <option>20-50</option>
+				 <option>50-100</option>
+				 <option>>100</option>
+			</select><div align="right">Inside: <input type="checkbox">/Outside: <input type="checkbox"></div></div>
+
+			<div style="display:inline"><p>Likes: <input type="text"></p> <p>Dislikes: <input type="text"></p></div>
+ 		</div>
     </div>
 
     <div class="tabContent" id="favorites">
-      <h2>Favorited Activities</h2>
-      <div>
-        <p>Stuff</p>
-      </div>
+		<h2>Favorites</h2>
+			<div id="table-wrapper">
+			  <div id="table-scroll">
+			    <table width="100%">
+			        <thead>
+			            <tr>
+			                <th width="40%"><span class="text">Name</span></th>
+			                <th width="40%"><span class="text">Location</span></th>
+			                <th width="20%"><span class="text">Remove From Favorites</span></th>
+			            </tr>
+			        </thead>
+			        <tbody>
+					<tr> <td>Bob's Bowling</td> <td>Bob's Bowling Alley</td> <td><a href="#" class="parcbutton">Remove</a></td> </tr>
+			        </tbody>
+			    </table>
+			  </div>
+	</div>
+    </div>
+
+    <div class="tabContent" id="schedule">
+      <h2>Current Schedule</h2>
+		<p>Week of <select>
+			 <option selected>June 24 - June 30</option>
+			 <option>July 1 - July 7</option>
+			 <option>July 8 - July 14</option>
+		</select></p>
+
+			<div id="table-wrapper">
+			  <div id="table-scroll">
+				<table width="100%">
+					<thead>
+						<tr>
+						    <th width="9%"><span class="text"></span></th>
+							<th width="13%"><span class="text">M</span></th>
+							<th width="13%"><span class="text">T</span></th>
+							<th width="13%"><span class="text">W</span></th>
+							<th width="13%"><span class="text">Th</span></th>
+							<th width="13%"><span class="text">F</span></th>
+							<th width="13%"><span class="text">Sa</span></th>
+							<th width="13%"><span class="text">Su</span></th>
+						</tr>
+					</thead>
+					<tbody>
+					<tr> <td>1:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>2:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>3:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>4:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>5:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>6:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>7:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>8:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>9:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>10:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>11:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>12:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>13:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>14:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>15:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>16:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>17:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>18:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>19:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>20:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>21:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>22:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>23:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr> <td>24:00</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					</tbody>
+				</table>
+			  </div>
+			</div>
+	<table width="15" height="15" style="border: 1px solid #000; background:purple"> Activity With Reminder
+	<table width="15" height="15" style="border: 1px solid #000; background:green"> Favorite Activity
     </div>
 
   </body>
