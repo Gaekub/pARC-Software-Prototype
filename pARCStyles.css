@@ -12,8 +12,8 @@
       
       h1 {display : inline;}
       
-      #table-wrapper table * {background:yellow; color:black;}
-      #table-wrapper table thead th .text {/*position:absolute; top:-20px; */z-index:2; height:20px; width:35%; border:1px solid red; }
+      #table-wrapper table * {background:#f1f0ee; color:black; border:1px solid grey;}
+      #table-wrapper table thead th .text {/*position:absolute; top:-20px; */z-index:2; height:20px; }
       
 .parcbutton {
       -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
