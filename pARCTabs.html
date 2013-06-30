@@ -80,7 +80,7 @@
       <h2>Search For Activities</h2>
       <div>
       	<p><a href="#" class="parcbutton">Quick Find</a>  Load User Preferences <input type="checkbox"><br></p>
-      	<p><a href="#" class="parcbutton" onClick="togglePageElementVisibility(advancedSearch)">Advanced Search</a></p>
+      	<div align="center" id="showAdvanced"><a href="#" onClick="showPageElement(advancedSearch);hidePageElement(showAdvanced)"><img src="collapseDown.png" alt="Hide Advanced Search"> </a></div>
  		<div id="advancedSearch" style="display:none">
 			Date: <select>
 	 		 <option>Yesterday</option>
@@ -108,6 +108,8 @@
 			</select><div align="right">Inside: <input type="checkbox">/Outside: <input type="checkbox"></div></div>
 
 			<div style="display:inline"><p>Likes: <input type="text"></p> <p>Dislikes: <input type="text"></p></div>
+
+			<div align="center"><a href="#" onClick="hidePageElement(advancedSearch);showPageElement(showAdvanced)"><img src="collapseUp.png" alt="Hide Advanced Search"> </a></div>
  		</div>
  		Results
 			<div id="table-wrapper">
