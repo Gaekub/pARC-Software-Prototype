@@ -23,6 +23,7 @@
 		<li><a href="#profile">Profile</a></li>
 		<li><a href="#schedule">Schedule</a></li>
 		<li><a href="#search">Search</a></li>
+		<li><a href="#quick">Quick Search</a></li>
     </ul>
 
     <div class="tabContent" id="homepage">
@@ -80,7 +81,7 @@
     <div class="tabContent" id="search">
       <h2>Search For Activities</h2>
       <div>
-      	<p><a class="parcbutton">Quick Find</a>  Load User Preferences <input type="checkbox"><br></p>
+
       	<div align="center" id="showAdvanced"><a href="#" onClick="showPageElement(advancedSearch);hidePageElement(showAdvanced)"><img src="collapseDown.png" alt="Hide Advanced Search"> </a></div>
  		<div id="advancedSearch" style="display:none">
 			Date: <select>
@@ -156,16 +157,17 @@
 				<table width="100%">
 					<thead>
 						<tr>
-							<th width="50%"><span class="text">Name</span></th>
+							<th width="40%"><span class="text">Name</span></th>
 							<th width="40%"><span class="text">Location</span></th>
 							<th width="10%"><span class="text">Approx. Cost</span></th>
+							<th width="10%"><span class="text">Favorite</span></th>
 						</tr>
 					</thead>
 						<colgroup>
 							<col style="text-decoration:line-through" span="2">
 						</colgroup>
 					<tbody>
-					<tr> <td><a href="url">Bob's Bowling</a></td> <td>Bob's Bowling Alley</td> <td>30$</td></tr>
+					<tr> <td><a href="url">Bob's Bowling</a></td> <td>Bob's Bowling Alley</td> <td>30$</td><td><a href="JavaScript:newPopup('AddedToFavourites.html');"class="parcbutton">Add To Favourites</a></td></tr>
 					</tbody>
 				</table>
 			  </div>
@@ -199,6 +201,34 @@
 
 			<div style="display:inline"><p>Likes: <input type="text"></p> <p>Dislikes: <input type="text"></p></div>
  		</div>
+    </div>
+
+    <div class="tabContent" id="quick">
+      <h2>Quick Find</h2>
+      <p><a class="parcbutton">Quick Find</a>  Load User Preferences <input type="checkbox"><br></p>
+		<div>
+ 		Results
+			<div id="table-wrapper">
+			  <div id="table-scroll">
+				<table width="100%">
+					<thead>
+						<tr>
+							<th width="40%"><span class="text">Name</span></th>
+							<th width="40%"><span class="text">Location</span></th>
+							<th width="10%"><span class="text">Approx. Cost</span></th>
+							<th width="10%"><span class="text">Favorite</span></th>
+						</tr>
+					</thead>
+						<colgroup>
+							<col style="text-decoration:line-through" span="2">
+						</colgroup>
+					<tbody>
+					<tr> <td><a href="url">Bob's Bowling</a></td> <td>Bob's Bowling Alley</td> <td>30$</td><td><a href="JavaScript:newPopup('AddedToFavourites.html');"class="parcbutton">Add To Favourites</a></td></tr>
+					</tbody>
+				</table>
+			  </div>
+			</div>
+      </div>
     </div>
 
     <div class="tabContent" id="favorites">
@@ -276,6 +306,8 @@
 	<table width="15" height="15" style="border: 1px solid #000; background:purple"> Activity With Reminder
 	<table width="15" height="15" style="border: 1px solid #000; background:green"> Favorite Activity
     </div>
+
+
 
   </body>
 </html>
