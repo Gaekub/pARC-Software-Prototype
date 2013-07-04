@@ -112,5 +112,5 @@ document.getElementById(divId).style.display = 'none';
 // Popup window code
 function newPopup(url) {
 popupWindow = window.open(
-url,'popUpWindow','height=70,width=150,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+url,'popUpWindow','height=200,width=500,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
 }
